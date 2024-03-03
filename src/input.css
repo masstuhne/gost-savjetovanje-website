@@ -2,10 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .section-min-height {
+    min-height: calc(100vh - 112px);
+  }
+}
+
 .header-color-my {
-    background-color: #B4B4B8;
+  background-color: #b4b4b8;
 }
 
 .background-color-my {
-    background-color: #E3E1D9
+  background-color: #e3e1d9;
+}
+
+.background-color-dark-blue {
+  background-color: #122d42;
+}
+
+.text-color-nav-my {
+  color: #122d42;
+}
+
+.text-color-grey-my {
+  color: #c7c8cc;
+}
+
+.text-color-orange-my {
+  color: #d17c3f;
+}
+
+.bg-my {
+  background-color: #122d42;
+}
+
+.bg-my-2 {
+  background-color: #c7c8cc;
+}
+
+.border-slate-my {
+  border-color: #122d42;
+}
+
+.transition-opacity-my {
+  transition: opacity 0.5s;
 }

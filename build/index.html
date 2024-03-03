@@ -1,16 +1,241 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="en" class="sm:scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GOST-savjetovanje</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body class="min-h-screen background-color-my">
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/f215e83df8.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/main.js" defer></script>
+  </head>
+  <body class="min-h-screen background-color-my">
     <header class="header-color-my text-white sticky top-0 z-10">
-        <section class="max-w-4xl mx-auto p-4 flex justify-between items-center">
-            <img class="object-scale-down h-20 w-52" src="./img/logo_transparent.png">
-        </section>
+      <section class="max-w-4xl mx-auto p-4 flex justify-between items-center">
+        <a href="#hero">
+          <img
+            class="object-scale-down h-20 w-52"
+            src="./img/logo_transparent.png"
+          />
+        </a>
+        <div>
+          <button
+            id="hamburger-button"
+            class="text-3xl md:hidden cursor-pointer relative w-8 h-8"
+          >
+            <i class="fa-solid fa-bars text-color-nav-my"></i>
+          </button>
+          <button
+            id="close-button"
+            class="text-3xl md:hidden cursor-pointer relative w-8 h-8 hidden"
+          >
+            <i class="fa-solid fa-times text-color-nav-my"></i>
+          </button>
+          <nav
+            class="hidden md:block space-x-8 text-xl text-color-nav-my"
+            aria-label="main"
+          >
+            <a href="#services" class="hover:opacity-90">Usluge</a>
+            <a href="#experience" class="hover:opacity-90">Iskustvo</a>
+            <a href="#contact" class="hover:opacity-90">Kontakt</a>
+          </nav>
+        </div>
+      </section>
+      <section
+        id="mobile-menu"
+        class="absolute top-112 background-color-dark-blue w-full text-5xl flex-col justify-center origin-top animate-open-menu hidden"
+      >
+        <nav
+          class="flex flex-col min-h-screen items-center py-8"
+          aria-label="mobile"
+        >
+          <a href="#hero" class="w-full text-center py-6 hover:opacity-90"
+            >Početna</a
+          >
+          <a href="#services" class="w-full text-center py-6 hover:opacity-90"
+            >Usluge</a
+          >
+          <a href="#experience" class="w-full text-center py-6 hover:opacity-90"
+            >Iskustvo</a
+          >
+          <a href="#contact" class="w-full text-center py-6 hover:opacity-90"
+            >Kontakt</a
+          >
+          <p class="text-sm bottom-0 py-12">Made with &#9829; in Zagorje</p>
+        </nav>
+      </section>
     </header>
-</body>
+    <main class="max-w-4xl mx-auto">
+      <section
+        id="hero"
+        class="flex flex-col-reverse justify-center sm:flex-row p-6 items-center gap-8 mb-12 scroll-mt-40"
+      >
+        <article class="sm:w-1/2 items-center">
+          <h2
+            class="max-w-md text-4xl font-bold text-center sm:text-5xl sm:text-left text-color-nav-my"
+          >
+            GOST obrt za savjetovanje
+          </h2>
+          <p
+            class="max-w-md text-xl mt-4 text-center sm:text-left text-color-nav-my"
+          >
+            <b>Goran Stuhne</b> dipl. ing. kemije
+          </p>
+          <p
+            class="max-w-md text-lg mt-4 text-center sm:text-left text-color-nav-my"
+          >
+            OIB: 98804305722, Pretežita djelatnost: OSTALE STRUČNE, ZNANSTVENE I
+            TEHNIČKE DJELATNOSTI
+          </p>
+        </article>
+        <img class="w-1/2" src="./img/paper-transparent.png" alt="" />
+      </section>
+      <hr class="mx-auto h-0.5 bg-my w-1/2" />
+      <section id="services" class="p-6 my-12 scroll-mt-28">
+        <h2
+          class="text-4xl font-bold text-center sm:text-5xl mb-6 text-color-nav-my"
+        >
+          Usluge
+        </h2>
+        <ul
+          class="uppercase list-none mx-auto my-12 flex flex-col sm:flex-col items-center gap-8"
+        >
+          <li
+            class="w-2/3 sm:w-5/6 flex flex-col items-center border border-solid border-slate-my bg-my-2 py-6 px-2 rounded-3xl shadow-xl"
+          >
+            <h3 class="text-2xl sm:text-3xl text-center text-color-nav-my">
+              savjetovanje
+            </h3>
+            <p
+              class="hidden sm:block text-lg text-center text-color-nav-my mt-2"
+            >
+              Savjetovanje kod primjene različitih sustava upravljanja;
+              normiranih prema:
+              <span class="text-lg text-color-orange-my font-bold"
+                >HRN EN ISO/IEC 17025, HRN EN ISO/IEC 17020, HRN EN 9001</span
+              >.
+            </p>
+            <p
+              class="sm:hidden text-2xl text-center text-color-nav-my mt-2"
+            ></p>
+          </li>
+          <li
+            class="w-2/3 sm:w-5/6 flex flex-col items-center border border-solid border-slate-my bg-my-2 py-6 px-2 rounded-3xl shadow-xl"
+          >
+            <h3 class="text-2xl sm:text-3xl text-center text-color-nav-my">
+              upravljanje
+            </h3>
+            <p
+              class="hidden sm:block text-lg text-center text-color-nav-my mt-2"
+            >
+              Usluga održavanja i poboljšavanja različitih sustava upravljanja.
+            </p>
+            <p
+              class="sm:hidden text-2xl text-center text-color-nav-my mt-2"
+            ></p>
+          </li>
+          <li
+            class="w-2/3 sm:w-5/6 flex flex-col items-center border border-solid border-slate-my bg-my-2 py-6 px-2 rounded-3xl shadow-xl"
+          >
+            <h3 class="text-2xl sm:text-3xl text-center text-color-nav-my">
+              priprema za akreditaciju
+            </h3>
+            <p
+              class="hidden sm:block text-lg text-center text-color-nav-my mt-2"
+            >
+              Pomoć kod pripreme za akreditaciju.
+            </p>
+            <p
+              class="sm:hidden text-2xl text-center text-color-nav-my mt-2"
+            ></p>
+          </li>
+          <li
+            class="w-2/3 sm:w-5/6 flex flex-col items-center border border-solid border-slate-my bg-my-2 py-6 px-2 rounded-3xl shadow-xl"
+          >
+            <h3 class="text-2xl sm:text-3xl text-center text-color-nav-my">
+              interni auditi
+            </h3>
+            <p
+              class="hidden sm:block text-lg text-center text-color-nav-my mt-2"
+            >
+              Interni auditi prema:
+              <span class="text-lg text-color-orange-my font-bold"
+                >HRN EN ISO/IEC 17025, HRN EN ISO/IEC 17020</span
+              >.
+            </p>
+            <p
+              class="sm:hidden text-2xl text-center text-color-nav-my mt-2"
+            ></p>
+          </li>
+        </ul>
+      </section>
+      <hr class="mx-auto h-0.5 bg-my w-1/2" />
+      <section id="experience" class="p-6 my-12">
+        <h2
+          class="text-4xl font-bold text-center sm:text-5xl mb-6 text-color-nav-my"
+        >
+          Iskustvo
+        </h2>
+      </section>
+      <hr class="mx-auto h-0.5 bg-my w-1/2" />
+      <section id="contact" class="p-6 my-12">
+        <h2
+          class="text-4xl font-bold text-center sm:text-5xl mb-6 text-color-nav-my"
+        >
+          Kontakt
+        </h2>
+        <div
+          class="flex flex-col text-xl sm:text-2xl justify-center items-center text-color-nav-my gap-6"
+        >
+          <div>
+            <i class="fas fa-phone-alt icon"></i
+            ><strong> Broj telefona: </strong>+385 91 535 4628
+          </div>
+          <div>
+            <i class="fas fa-envelope icon"></i><strong> E-mail: </strong
+            ><a class="email-address" href="mailto:support@company.com"
+              >gstuhne@gmail.com</a
+            >
+          </div>
+          <div>
+            <i class="fab fa-linkedin icon"></i><strong> LinkedIn: </strong>
+            <a href="https://hr.linkedin.com/in/goran-stuhne-23412265"
+              >Goran Stuhne</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer" class="header-color-my text-color-nav-my text-xl">
+      <section
+        class="max-w-4xl mx-auto p-4 flex flex-col sm:flex-row sm:justify-between text-center"
+      >
+        <address class="justify-center">
+          <h2>
+            <strong>GOST obrt za obrazovanje</strong>
+          </h2>
+          <br />Zagrebačka 16, Krapinske Toplice 49217<br />
+          E-mail: <a href="mailto:gstuhne@gmail.com">gstuhne@gmail.com</a><br />
+          Broj telefona: <a href="+385915354628">(+385) 91 535 4628</a>
+        </address>
+        <nav
+          class="hidden md:flex flex-col justify-center gap-2"
+          aria-label="footer"
+        >
+          <a href="#services" class="hover:opacity-90">Usluge</a>
+          <a href="#experience" class="hover:opacity-90">Iskustvo</a>
+          <a href="#contact" class="hover:opacity-90">Kontakt</a>
+        </nav>
+        <div class="flex flex-col justify-center gap-2">
+          <a href="https://github.com/masstuhne" class="sm:mt-0 mt-2">
+            <i class="fa-brands fa-square-github text-4xl"></i>
+            <p>masstuhne</p>
+            <p>Made with &#9829; in Zagorje</p>
+          </a>
+        </div>
+      </section>
+    </footer>
+  </body>
 </html>
