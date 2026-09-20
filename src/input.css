@@ -47,3 +47,127 @@
 .transition-opacity-my {
   transition: opacity 0.5s;
 }
+
+/* Teniski servis (B2C) */
+.bg-tennis-my {
+  background-color: #cfdcae;
+}
+
+.border-tennis-my {
+  border-color: #4f6b31;
+}
+
+.text-color-tennis-my {
+  color: #2f4a1e;
+}
+
+.price-list-my {
+  width: 100%;
+  max-width: 28rem;
+  margin: 1.5rem auto 0;
+}
+
+.price-list-my li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding: 0.5rem 0.25rem;
+  text-align: center;
+  border-bottom: 1px dashed #4f6b31;
+}
+
+/* Prijasnja verzija reda: naziv lijevo, cijena desno
+.price-list-my li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.5rem 0.25rem;
+  border-bottom: 1px dashed #4f6b31;
+}
+*/
+
+.price-list-my li:last-child {
+  border-bottom: none;
+}
+
+.price-my {
+  font-weight: 700;
+  white-space: nowrap;
+  color: #d17c3f;
+}
+
+.price-ref-my {
+  flex-basis: 100%;
+  font-size: 0.78em;
+  text-transform: none;
+  opacity: 0.85;
+}
+
+/* Ikona reketa s lopticom u navigaciji */
+.icon-racket-my {
+  display: inline-block;
+  vertical-align: -0.15em;
+  margin-left: 0.2em;
+}
+
+.nav-tennis-my {
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
+  color: #2f4a1e;
+}
+
+.nav-tennis-my .icon-racket-my ellipse,
+.nav-tennis-my .icon-racket-my circle {
+  fill: #cfdcae;
+}
+
+.nav-tennis-my .icon-racket-my {
+  width: 1.6em;
+  height: 1.6em;
+  margin-left: 0;
+  vertical-align: top;
+}
+
+.nav-tennis-my::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 0.5rem;
+  padding: 0.35rem 0.6rem;
+  background-color: #2f4a1e;
+  color: #cfdcae;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  border-radius: 0.4rem;
+  box-shadow: 0 2px 6px rgba(18, 45, 66, 0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+
+.nav-tennis-my:hover::after,
+.nav-tennis-my:focus-visible::after {
+  opacity: 1;
+}
+
+.cjenik-link-my {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.cjenik-link-my:hover {
+  color: #4f6b31;
+}
+
+nav[aria-label="footer"] {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
